@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <h1>Contacts:</h1>
+  <% const nameUser='Jack' %>
+  <ul>
+    <% if (contacts.length) { %>
+      <% contacts.forEach(({ link, name }) => { %>
+        <li>
+          <a href="<%= link %>" target="_blank"><%= name %></a>
+        </li>
+      <% }) %>
+      <li>nameUser: <%= nameUser %></li>
+    <% } %>
+  </ul>
+</body>
+</html>
